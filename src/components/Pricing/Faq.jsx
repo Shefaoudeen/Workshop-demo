@@ -9,23 +9,27 @@ const Faq = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col gap-4 justify-center items-center w-screen py-10 pb-20">
       <h1 className="text-xl font-semibold">FAQ</h1>
-      <div className="w-[75%] bg-[#171717] flex flex-col gap-4">
+      <div className="max-w-[75%] min-w-[75%] bg-[#171717] flex flex-col gap-4 max-md:max-w-full rounded-2xl p-4">
         {FAQ_info.map((ele, ind) => {
           return (
-            <div className="border-b-2 border-gray-400 flex flex-col gap-4">
-              <div onClick={() => handleClick(ind)}>
+            <div className="border-b-2 border-gray-500 flex flex-col gap-4 w-full">
+              <div
+                onClick={() => handleClick(ind)}
+                className="cursor-pointer flex justify-between p-4 w-full"
+              >
                 <h1 className="text-xl font-semibold">{ele.question}</h1>
+                <h1>{toggle == ind ? "-" : "+"}</h1>
               </div>
               <div
                 className={`${
                   ind == toggle
-                    ? "h-auto max-h-[9999px] "
-                    : "max-h-0 overflow-hidden"
-                } ease-[cubic-bezier(0,1,0,1)]  transition-all duration-500 `}
+                    ? "h-auto max-h-[9999px] transition-all"
+                    : "max-h-0 overflow-hidden transition-all hidden"
+                } duration-500 ease-linear  w-full`}
               >
-                {ele.answer}
+                <h1 className="p-4">{ele.answer}</h1>
               </div>
             </div>
           );

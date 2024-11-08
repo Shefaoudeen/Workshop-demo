@@ -8,10 +8,12 @@ const Navbar = () => {
   console.log(location);
 
   return (
-    <div className="fixed  flex w-screen justify-between  text-gray-500  backdrop-blur  p-3 border-b-white/50 border-b z-50">
-      <div className="text-white font-semibold z-20">ChatGPT</div>
-      <div>
-        <div className="flex gap-5 z-20">
+    <div className="fixed  flex w-screen justify-between  text-gray-500  backdrop-blur  p-5 shadow-xl shadow-gray-50/5 z-50 md:px-[100px] max-md:text-sm">
+      <div className="text-white font-semibold z-20 max-md:min-w-[30vw] sticky">
+        ChatGPT |{" "}
+      </div>
+      <div className="max-md:min-w-[100vw]">
+        <div className="flex md:gap-5 gap-2 z-20">
           {Navbar_details.map((ele, index) => {
             return (
               <div key={index} className="z-20">

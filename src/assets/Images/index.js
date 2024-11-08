@@ -5,5 +5,6 @@ import Icon1 from "./web.png";
 import Icon2 from "./insta.png";
 import Icon3 from "./whatsapp.png";
 import Icon4 from "./linkedin.png";
+import DClogo from "./dcLogo.png";
 
-export { Photo1, Photo2, Photo3, Icon1, Icon2, Icon3, Icon4 };
+export { Photo1, Photo2, Photo3, Icon1, Icon2, Icon3, Icon4, DClogo };

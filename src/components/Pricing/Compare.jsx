@@ -6,9 +6,9 @@ const Compare = () => {
   const [individual, SetIndividual] = useState(true);
 
   return (
-    <div className="min-h-screen flex justify-center items-center w-full px-4 flex-col py-10">
+    <div className="min-h-screen flex justify-center items-center w-full md:px-4 flex-col py-10">
       {/*Bigger Screens*/}
-      <div className="w-[75%] py-10 flex flex-col gap-5 max-md:hidden">
+      <div className="w-[75%] py-10 flex flex-col gap-5 max-md:hidden ">
         <h1 className="text-3xl font-semibold">
           Compare features across plans
         </h1>
@@ -85,11 +85,9 @@ const Compare = () => {
           <div></div>
           <div>
             <h1>{individual ? "Free" : "Team"}</h1>
-            <CustomButton content="Start now" />
           </div>
           <div>
             <h1>{individual ? "Plus" : "Enterise"}</h1>
-            <CustomButton content="Start now" />
           </div>
         </div>
         <div className="bg-[#171717] py-4 px-4 flex flex-col">

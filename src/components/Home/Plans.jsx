@@ -4,10 +4,10 @@ import CustomButton from "../CustomButton";
 
 const Plans = () => {
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center py-20">
       <div className="w-[72%] flex flex-col max-md:w-[90%]">
         <div className="text-center py-5">
-          <h1 className="text-3xl font-semibold py-5">
+          <h1 className="text-3xl font-semibold md:py-5 max-md:text-xl">
             Get started with ChatGPT today
           </h1>
           <h1>View pricing plans</h1>
@@ -40,12 +40,6 @@ const Plans = () => {
               </div>
             );
           })}
-        </div>
-        <div className="bg-[#171717] mt-10 flex justify-center flex-col items-center py-10 text-center">
-          <h1 className="text-4xl max-lg:w-[65%] md:w-[50%] max-md:text-2xl">
-            Join hundreds of millions of users and try ChatGPT today.
-          </h1>
-          <CustomButton content="Try ChatGPT" />
         </div>
       </div>
     </div>
