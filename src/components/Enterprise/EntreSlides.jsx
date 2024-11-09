@@ -14,7 +14,7 @@ const EntreSlides = () => {
         <button>L</button>
         <button>R</button>
       </div>
-      <div className="ml-[200px] max-md:ml-[50px] flex md:gap-10 gap-5 overflow-hidden text-start">
+      <div className="ml-[200px] max-md:ml-[50px] flex md:gap-10 gap-5 overflow-x-scroll no-scrollbar text-start">
         {TeamSlideDetails.map((ele, ind) => {
           return (
             <div className="relative">

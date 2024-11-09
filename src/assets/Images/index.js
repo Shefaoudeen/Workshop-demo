@@ -31,8 +31,14 @@ import card4 from "./04.webp";
 import card5 from "./05.webp";
 import card6 from "./06.webp";
 import card7 from "./07.webp";
+import mob1 from "./mob1.webp";
+import mob2 from "./mob2.webp";
+import mob3 from "./mob3.webp";
 
 export {
+  mob1,
+  mob2,
+  mob3,
   Photo1,
   Photo2,
   Photo3,

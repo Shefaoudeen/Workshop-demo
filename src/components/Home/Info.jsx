@@ -14,7 +14,11 @@ const Info = () => {
             </div>
             <img
               src={ele.image}
-              className="rounded-xl max-md:h-[75vh] object-cover"
+              className="rounded-xl max-md:h-[75vh] object-cover max-md:hidden"
+            />
+            <img
+              src={ele.mobileImage}
+              className="rounded-xl max-md:h-[75vh] object-cover md:hidden"
             />
           </section>
         );
