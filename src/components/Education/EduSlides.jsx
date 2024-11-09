@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Video1, Video2, Video3 } from "../../assets/videos";
+import { antAnimation } from "../../utils/gsapAnimations";
 
 const EduSlides = () => {
   const [selected, setSeleted] = useState(0);
   const videoSlides = [Video1, Video2, Video3, Video2];
-
+  antAnimation(selected)
   return (
     <div className="flex flex-col justify-center  w-full">
       <h1 className="text-3xl max-md:text-xl text-center">
@@ -47,7 +48,8 @@ const EduSlides = () => {
       <div className="flex w-full transition-all duration-200 ease-linear rounded-2xl items-center justify-center">
         <video
           src={videoSlides[selected]}
-          className="h-[60vh] w-[50vw] object-cover transition-all duration-200 ease-linear rounded-2xl"
+          id="img"
+          className="h-[60vh] w-[50vw] object-cover rounded-2xl"
           autoPlay
         />
       </div>

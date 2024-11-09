@@ -9,11 +9,14 @@ import {
   card6,
   card7,
 } from "../../assets/Images";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { antAnimation } from "../../utils/gsapAnimations";
 
 const EntreAntAnimation = () => {
   const cards = [card1, card2, card3, card4, card5, card6, card7];
   const [selected, Setselected] = useState(0);
-
+  antAnimation(selected)
   return (
     <div className="min-h-screen flex flex-col items-center gap-10">
       <div className="text-3xl max-md:text-xl leading-10 text-center font-semibold">
@@ -98,6 +101,7 @@ const EntreAntAnimation = () => {
         <img
           className="h-[70vh] rounded-xl object-cover"
           src={cards[selected]}
+          id="img"
         />
       </div>
     </div>

@@ -2,16 +2,10 @@ import React from "react";
 import CustomButton from "../CustomButton";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { titleAnimation } from "../../utils/gsapAnimations";
 
 const Landing = () => {
-  useGSAP(() => {
-    gsap.from('.title', {
-      y : 100,
-      duration : 0.5,
-      stagger : 0.1,
-      filter : "blur(3px)",
-    })
-  },[])
+  titleAnimation("title")
   return (
     <div className="w-full h-screen  flex items-center justify-center ">
       <div className="text-center flex flex-col gap-6 md:px-20">
