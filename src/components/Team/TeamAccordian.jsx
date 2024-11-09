@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Video1 } from "../../assets/videos";
 import { TeamAccordianDetails } from "../../Data/TeamAccordian";
+import { teamAcc1, teamAcc2, teamAcc3 } from "../../assets/Images";
 
 const TeamAccordian = () => {
+  const AccordianPhotos = [teamAcc1, teamAcc2, teamAcc3, teamAcc1];
+
   const [toggle, setToggle] = useState(0);
   const handleClick = (index) => {
     return setToggle(index);
@@ -17,7 +20,7 @@ const TeamAccordian = () => {
       </div>
       <div className="bg-[#171717] flex max-w-[70%] min-h-[75vh] rounded-xl overflow-hidden max-md:hidden">
         <div className="w-[50%]">
-          <video src={Video1} className="h-full object-cover" />
+          <img src={AccordianPhotos[toggle]} className="h-full object-cover" />
         </div>
         <div className="w-[50%] flex flex-col justify-center items-center p-5">
           <div>

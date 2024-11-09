@@ -3,7 +3,7 @@ import { list1 } from "../../Data/HomePageInfo";
 
 const ListSliding = () => {
   return (
-    <div className="bg-black text-white flex flex-col gap-10 py-32">
+    <div className="flex flex-col gap-10 py-32">
       <div className="flex gap-5">
         {list1.map((ele, index) => {
           return (

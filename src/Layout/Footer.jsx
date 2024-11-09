@@ -3,7 +3,7 @@ import { DC_footer, Footer_details } from "../Data/FooterInfo";
 
 const Footer = () => {
   return (
-    <div className="w-screen bg-black text-white">
+    <div className="w-screen bg-black/95 text-white">
       <div className="flex max-md:flex-col w-full md:justify-evenly max-md:gap-6 py-10 max-md:px-5">
         {Footer_details.map((ele, index) => {
           return (

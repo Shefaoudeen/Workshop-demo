@@ -1,7 +1,17 @@
 import React, { useState } from "react";
 import { Video1 } from "../../assets/videos";
+import {
+  card1,
+  card2,
+  card3,
+  card4,
+  card5,
+  card6,
+  card7,
+} from "../../assets/Images";
 
 const EntreAntAnimation = () => {
+  const cards = [card1, card2, card3, card4, card5, card6, card7];
   const [selected, Setselected] = useState(0);
 
   return (
@@ -10,7 +20,7 @@ const EntreAntAnimation = () => {
         <h1> Customize ChatGPT to any workflow</h1>
         <h1>and collaborate across teams</h1>
       </div>
-      <div className="flex gap-5 max-md:text-sm overflow-scroll">
+      <div className="flex gap-5 max-md:text-sm overflow-auto">
         <button
           className={`px-5 py-2 ${
             selected === 0 ? "bg-white text-black" : "hover:bg-[#171717]"
@@ -85,12 +95,10 @@ const EntreAntAnimation = () => {
       </div>
        */}
       <div className="w-[80%] flex justify-center">
-        <video
-          loop={true}
-          autoPlay={true}
+        <img
           className="h-[70vh] rounded-xl object-cover"
-          src={Video1}
-        ></video>
+          src={cards[selected]}
+        />
       </div>
     </div>
   );

@@ -5,10 +5,12 @@ import Team from "./Pages/Team";
 import Enterprise from "./Pages/Enterprise";
 import Education from "./Pages/Education";
 import Pricing from "./Pages/Pricing";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />

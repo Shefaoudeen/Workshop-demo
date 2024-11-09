@@ -1,6 +1,6 @@
 import React from "react";
 import CustomButton from "../CustomButton";
-import { DClogo } from "../../assets/Images";
+import { DClogo, Uni1, Uni2, Uni3, Uni4 } from "../../assets/Images";
 
 const EduHome = () => {
   return (
@@ -15,18 +15,22 @@ const EduHome = () => {
         <CustomButton content="Talk with our team" />
       </div>
       <div className="mt-20">
-        <div className="flex gap-5 max-md:grid max-md:grid-cols-2">
+        <div className="flex gap-5 max-md:grid max-md:grid-cols-2 items-center">
           <div>
-            <img src={DClogo} alt="" className="w-[200px] grayscale" />
+            <img src={Uni1} alt="" className="w-[200px] grayscale" />
           </div>
           <div>
-            <img src={DClogo} alt="" className="w-[200px] grayscale" />
+            <img src={Uni2} alt="" className="w-[200px] grayscale" />
           </div>
           <div>
-            <img src={DClogo} alt="" className="w-[200px] grayscale" />
+            <img src={Uni3} alt="" className="w-[200px] grayscale" />
           </div>
           <div>
-            <img src={DClogo} alt="" className="w-[200px] grayscale" />
+            <img
+              src={Uni4}
+              alt=""
+              className="w-[200px] max-h-[100px] object-contain grayscale"
+            />
           </div>
         </div>
       </div>

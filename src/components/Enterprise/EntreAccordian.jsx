@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Video1 } from "../../assets/videos";
-import { TeamAccordianDetails } from "../../Data/TeamAccordian";
+import { EntrepriseAccordianDetails } from "../../Data/EntrepriseAccordian";
+import { teamAcc1, teamAcc2, teamAcc3 } from "../../assets/Images";
 
 const EntreAccordian = () => {
+  const AccordianPhotos = [teamAcc1, teamAcc2, teamAcc3, teamAcc1];
   const [toggle, setToggle] = useState(0);
   const handleClick = (index) => {
     return setToggle(index);
@@ -16,10 +18,10 @@ const EntreAccordian = () => {
       </div>
       <div className="bg-[#171717] flex max-w-[70%] min-h-[60vh] rounded-md overflow-hidden max-md:hidden">
         <div className="w-[50%] flex  justify-center items-center">
-          <video src={Video1} className="h-full object-cover" />
+          <img src={AccordianPhotos[toggle]} className="h-full object-cover" />
         </div>
-        <div className="w-[50%] flex flex-col justify-center items-center p-5">
-          {TeamAccordianDetails.map((ele, ind) => {
+        <div className="w-[50%] flex flex-col justify-center items-center p-5 h-[70vh]">
+          {EntrepriseAccordianDetails.map((ele, ind) => {
             return (
               <div className="border-b-2 border-gray-500 flex flex-col gap-4 w-full">
                 <div
@@ -47,7 +49,7 @@ const EntreAccordian = () => {
       </div>
       <div className="bg-[#171717] flex max-w-[90%] min-h-[60vh] rounded-md overflow-hidden md:hidden">
         <div className="flex flex-col justify-center items-center p-5">
-          {TeamAccordianDetails.map((ele, ind) => {
+          {EntrepriseAccordianDetails.map((ele, ind) => {
             return (
               <div className="border-b-2 border-gray-500 flex flex-col gap-4 w-full">
                 <div

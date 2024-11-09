@@ -1,6 +1,12 @@
 import React from "react";
 import CustomButton from "../CustomButton";
-import { DClogo } from "../../assets/Images";
+import {
+  Company1,
+  Company2,
+  Company3,
+  Company4,
+  DClogo,
+} from "../../assets/Images";
 
 const TeamLanding = () => {
   return (
@@ -19,18 +25,18 @@ const TeamLanding = () => {
         </div>
         <CustomButton content="Start now" />
       </div>
-      <div className="flex gap-5 max-md:grid max-md:grid-cols-2 max-md:grid-rows-2">
+      <div className="flex gap-10 max-md:grid max-md:grid-cols-2 max-md:grid-rows-2 items-center">
         <div>
-          <img src={DClogo} alt="" className="w-[200px] grayscale" />
+          <img src={Company1} alt="" className="w-[200px] grayscale" />
         </div>
         <div>
-          <img src={DClogo} alt="" className="w-[200px] grayscale" />
+          <img src={Company2} alt="" className="w-[200px] grayscale" />
         </div>
         <div>
-          <img src={DClogo} alt="" className="w-[200px] grayscale" />
+          <img src={Company3} alt="" className="w-[200px] grayscale" />
         </div>
         <div>
-          <img src={DClogo} alt="" className="w-[200px] grayscale" />
+          <img src={Company4} alt="" className="w-[200px] grayscale" />
         </div>
       </div>
     </div>

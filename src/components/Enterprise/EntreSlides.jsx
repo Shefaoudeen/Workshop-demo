@@ -17,9 +17,13 @@ const EntreSlides = () => {
       <div className="ml-[200px] max-md:ml-[50px] flex md:gap-10 gap-5 overflow-hidden text-start">
         {TeamSlideDetails.map((ele, ind) => {
           return (
-            <div className="h-[60vh] max-md:h-[50vh] min-w-[20vw] max-md:min-w-[60vw] bg-[#171717] p-5 flex flex-col justify-between rounded-xl">
-              <h1>{ele.title}</h1>
-              <h1>{ele.description}</h1>
+            <div className="relative">
+              <img
+                src={ele.image}
+                className={`h-[60vh] max-md:h-[50vh] min-w-[20vw] max-md:min-w-[60vw] flex flex-col justify-between `}
+              ></img>
+              <h1 className="absolute top-5 left-5 font-bold">{ele.title}</h1>
+              <h1 className="absolute bottom-5 left-5">{ele.description}</h1>
             </div>
           );
         })}

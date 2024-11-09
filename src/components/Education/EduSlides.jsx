@@ -10,7 +10,7 @@ const EduSlides = () => {
       <h1 className="text-3xl max-md:text-xl text-center">
         How campuses use ChatGPT today
       </h1>
-      <div className="flex gap-5 py-5 text-xl max-md:text-sm overflow-auto">
+      <div className="flex justify-center gap-5 py-5 text-xl max-md:text-sm overflow-auto">
         <button
           className={`px-5 py-2 ${
             selected === 0 ? "bg-white text-black" : "hover:bg-[#171717]"
@@ -44,10 +44,10 @@ const EduSlides = () => {
           Campus operation
         </button>
       </div>
-      <div className="w-fit transition-all duration-200 ease-linear rounded-2xl">
+      <div className="flex w-full transition-all duration-200 ease-linear rounded-2xl items-center justify-center">
         <video
           src={videoSlides[selected]}
-          className="w-full h-[60vh] object-cover transition-all duration-200 ease-linear rounded-2xl"
+          className="h-[60vh] w-[50vw] object-cover transition-all duration-200 ease-linear rounded-2xl"
           autoPlay
         />
       </div>

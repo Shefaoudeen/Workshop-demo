@@ -3,7 +3,7 @@ import CustomButton from "../CustomButton";
 
 const Landing = () => {
   return (
-    <div className="bg-black/95 w-full h-screen text-white flex items-center justify-center">
+    <div className="w-full h-screen  flex items-center justify-center ">
       <div className="text-center flex flex-col gap-6 md:px-20">
         <h1 className="text-xl">ChatGPT</h1>
         <div className="text-6xl  tracking-tight max-md:text-3xl">
