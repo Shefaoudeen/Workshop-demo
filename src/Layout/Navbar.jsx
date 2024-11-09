@@ -13,7 +13,7 @@ const Navbar = () => {
         ChatGPT |{" "}
       </div>
       <div className="max-md:min-w-[20vw]"></div>
-      <div className="overflow-x-scroll ml-10">
+      <div className="overflow-x-visible ml-10">
         <div className="flex md:gap-5 gap-2 z-20">
           {Navbar_details.map((ele, index) => {
             return (
