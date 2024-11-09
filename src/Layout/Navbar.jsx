@@ -12,8 +12,8 @@ const Navbar = () => {
       <div className="text-white font-semibold z-20 max-md:min-w-[30vw] fixed">
         ChatGPT |{" "}
       </div>
-      <div></div>
-      <div className="max-md:min-w-[100vw] overflow-hidden">
+      <div className="max-md:min-w-[20vw]"></div>
+      <div className="overflow-hidden ml-10">
         <div className="flex md:gap-5 gap-2 z-20">
           {Navbar_details.map((ele, index) => {
             return (
