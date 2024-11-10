@@ -1,8 +1,10 @@
 import React from "react";
 import { eduCommits } from "../../Data/EduCommits";
 import CustomButton from "../CustomButton";
+import { listAnimation } from "../../utils/gsapAnimations";
 
 const EduCommitment = () => {
+  listAnimation(eduCommits,"infoPoints")
   return (
     <div className="flex flex-col gap-20 justify-center items-center py-20">
       <div className="flex flex-col justify-center items-center gap-8">
@@ -17,7 +19,7 @@ const EduCommitment = () => {
                 <ul className="flex flex-col gap-5">
                   {ele.points.map((subele, subindex) => {
                     return (
-                      <li className="flex gap-3">
+                      <li className="flex gap-3" id={"infoPoints" + index}>
                         <div>
                           <h1>✓</h1>
                         </div>

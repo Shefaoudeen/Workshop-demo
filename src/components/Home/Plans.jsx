@@ -4,21 +4,10 @@ import CustomButton from "../CustomButton";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { listAnimation } from "../../utils/gsapAnimations";
 gsap.registerPlugin(ScrollTrigger)
 const Plans = () => {
-  useGSAP(() => {
-    Plan_info.forEach((ele,ind) => {
-      gsap.from('#infoPoints'+ind,{
-        opacity : 0,
-        duration : 1,
-        stagger : 0.1,
-        scrollTrigger : {
-          trigger : '#infoPoints'+ind,
-          start : "top bottom",
-        }
-      })
-    })
-  },[])
+  listAnimation(Plan_info,"infoPoints")
   return (
     <div className="flex justify-center items-center py-20">
       <div className="w-[72%] flex flex-col max-md:w-[90%]">
