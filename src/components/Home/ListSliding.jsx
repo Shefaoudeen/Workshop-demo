@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { list1 } from "../../Data/HomePageInfo";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
@@ -21,18 +21,19 @@ const ListSliding = () => {
         ease : "none",
         repeat : -1
       })
-      // gsap.set(list1Ref.current,{
-      //     x : -list1Ref.current.scrollWidth/2-10,
-      // })
+      
     }
-      if(list2Ref.current){
-        t2.from(list2Ref.current,{
-          x : -list2Ref.current.scrollWidth/2-10,
-          duration : 30,
-          ease : "none",
-          repeat : -1
-        })
-      }  
+    if(list2Ref.current){
+      gsap.set(list2Ref.current,{
+          x : -list2Ref.current.scrollWidth/2,
+      })
+      t2.to(list2Ref.current,{
+        x : 0,
+        duration : 30,
+        ease : "none",
+        repeat : -1
+      })
+    }  
       if(list3Ref.current){
       t3.to(list3Ref.current,{
         x : -list3Ref.current.scrollWidth/2-10,

@@ -44,6 +44,7 @@ export function listAnimation(arr,id) {
         scrollTrigger : {
           trigger : "#"+id+ind,
           start : "top bottom",
+          scrub : 1
         }
       })
     })
