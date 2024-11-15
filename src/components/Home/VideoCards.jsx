@@ -1,8 +1,24 @@
 import React from "react";
 import { Video1 } from "../../assets/videos";
 import { features_info } from "../../Data/Features";
-
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
 const VideoCards = () => {
+  useGSAP(() =>{
+    features_info.forEach((ele,index) => {
+      gsap.from('#desc'+index, {
+        y : 100,
+        duration : 1,
+        filter : "blur(3px)",
+        scrollTrigger : {
+          trigger : "#desc"+index,
+          start : "top bottom",        
+        }
+      })
+    })
+  },[])
   return (
     <div className="flex flex-col justify-center items-center">
       <h1 className="text-3xl max-md:text-xl font-bold py-10">
@@ -16,10 +32,10 @@ const VideoCards = () => {
               key={index}
             >
               <div className="md:w-1/2 flex flex-col justify-center md:px-10 max-md:p-8 ">
-                <h1 className="text-3xl max-md:text-xl mb-6 font-semibold">
+                <h1 id={"desc" + index} className="text-3xl max-md:text-xl mb-6 font-semibold">
                   {ele.title}
                 </h1>
-                <p className="max-md:text-sm text-justify">{ele.description}</p>
+                <p id={"desc" + index} className="max-md:text-sm text-justify">{ele.description}</p>
               </div>
               <div className="md:w-1/2">
                 <video

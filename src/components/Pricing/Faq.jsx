@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FAQ_info } from "../../Data/Faq";
+import { accordianAnimation } from "../../utils/gsapAnimations";
 
 const Faq = () => {
   const [toggle, setToggle] = useState(null);
@@ -7,7 +8,7 @@ const Faq = () => {
     if (toggle == index) return setToggle(null);
     return setToggle(index);
   };
-
+  accordianAnimation(toggle)
   return (
     <div className="flex flex-col gap-4 justify-center items-center w-screen py-10 pb-20">
       <h1 className="text-xl font-semibold">FAQ</h1>
@@ -23,11 +24,12 @@ const Faq = () => {
                 <h1>{toggle == ind ? "-" : "+"}</h1>
               </div>
               <div
+                id="description"
                 className={`${
                   ind == toggle
-                    ? "h-auto max-h-[9999px] transition-all"
+                    ? "h-0 max-h-[9999px] transition-all"
                     : "max-h-0 overflow-hidden transition-all hidden"
-                } duration-500 ease-linear  w-full`}
+                } duration-500 ease-linear  w-full overflow-hidden`}
               >
                 <h1 className="p-4">{ele.answer}</h1>
               </div>

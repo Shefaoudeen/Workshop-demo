@@ -1,8 +1,13 @@
 import React from "react";
 import { Plan_info } from "../../Data/Plan";
 import CustomButton from "../CustomButton";
-
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { listAnimation } from "../../utils/gsapAnimations";
+gsap.registerPlugin(ScrollTrigger)
 const Plans = () => {
+  listAnimation(Plan_info,"infoPoints")
   return (
     <div className="flex justify-center items-center py-20">
       <div className="w-[72%] flex flex-col max-md:w-[90%]">
@@ -23,7 +28,7 @@ const Plans = () => {
                 <div className=" flex md:flex-1 flex-col py-2 gap-3">
                   {ele.info.map((subEle, subInd) => {
                     return (
-                      <div key={subInd} className="mb-2 flex">
+                      <div key={subInd} id={"infoPoints"+index} className="mb-2 flex">
                         {" "}
                         <div className="font-extrabold mr-2">&#10003;</div>
                         <div>{subEle}</div>
